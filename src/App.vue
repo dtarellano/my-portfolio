@@ -2,13 +2,17 @@
 <div id="app">
   <app-navbar></app-navbar>
   <h1>{{ hello }}</h1>
+  <app-profile></app-profile>
 </div>
 </template>
 
 <script>
+import anime from 'animejs';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+
 import Nav from './Components/Nav.vue';
+import Profile from './Components/Profile.vue';
 
 export default {
   name: 'app',
@@ -18,7 +22,8 @@ export default {
     }
   },
   components: {
-    "app-navbar": Nav
+    'app-navbar': Nav,
+    'app-profile': Profile
   }
 }</script>
 
