@@ -1,7 +1,6 @@
 <template>
 <div id="app">
   <app-navbar></app-navbar>
-  <h1>{{ hello }}</h1>
   <app-profile></app-profile>
   <div class="square">
 
