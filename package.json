@@ -13,6 +13,7 @@
     "animejs": "^2.2.0",
     "bootstrap": "4.0.0-beta.2",
     "bootstrap-vue": "^1.4.1",
+    "pixi.js": "^4.7.0",
     "vue": "^2.5.11"
   },
   "browserslist": [

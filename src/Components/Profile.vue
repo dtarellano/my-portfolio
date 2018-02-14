@@ -46,6 +46,8 @@
 <style>
   .profile {
     width: 40%;
+    position: absolute;
+    color: white;
   }
 
   ul {

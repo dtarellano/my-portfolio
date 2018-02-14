@@ -3,16 +3,19 @@
   <app-navbar></app-navbar>
   <h1>{{ hello }}</h1>
   <app-profile></app-profile>
+  <div class="square">
+
+  </div>
 </div>
 </template>
 
 <script>
-import anime from 'animejs';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 import Nav from './Components/Nav.vue';
 import Profile from './Components/Profile.vue';
+import canvas from './canvas';
 
 export default {
   name: 'app',
@@ -20,6 +23,10 @@ export default {
     return {
       hello: 'Hello World'
     }
+  },
+  created() {
+    console.log('hi')
+    canvas();
   },
   components: {
     'app-navbar': Nav,
