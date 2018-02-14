@@ -42,3 +42,13 @@
 <script>
 
 </script>
+
+<style>
+  .profile {
+    width: 40%;
+  }
+
+  ul {
+  list-style-type: none;
+  }
+</style>
