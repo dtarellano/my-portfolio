@@ -19,3 +19,9 @@
 <script>
 
 </script>
+
+<style>
+  span {
+    color: white;
+  }
+</style>

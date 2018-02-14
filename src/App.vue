@@ -35,6 +35,9 @@ export default {
 }</script>
 
 <style>
+body {
+  background-color: #343434;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
