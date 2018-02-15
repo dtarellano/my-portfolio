@@ -10,7 +10,7 @@ const canvas = () => {
   app.renderer.autoResize = true;
   app.renderer.resize(window.innerWidth, window.innerHeight);
   let rectangle = new PIXI.Graphics();
-  rectangle.beginFill(0x66ccff);
+  rectangle.beginFill(0x21a85e);
   rectangle.drawRect(0, 0, 64, 64);
   rectangle.endFill();
   rectangle.x = 170;
@@ -18,15 +18,13 @@ const canvas = () => {
   app.stage.addChild(rectangle);
 
   function setup() {
-    //Start the game loop by adding the `gameLoop` function to
-    //Pixi's `ticker` and providing it with a `delta` argument.
-    app.ticker.add(delta => gameLoop(delta));
+    app.ticker.add(delta => loop(delta));
   }
 
-  function gameLoop(delta) {
-    //Move the cat 1 pixel
-    rectangle.x += 5;
+  function loop(delta) {
+    rectangle.x += 5 + delta;
   }
+
   setup();
   document.body.appendChild(app.view);
 };
