@@ -14,8 +14,20 @@ const canvas = () => {
   rectangle.drawRect(0, 0, 64, 64);
   rectangle.endFill();
   rectangle.x = 170;
-  rectangle.y = 170;
+  rectangle.y = 0;
   app.stage.addChild(rectangle);
+
+  function setup() {
+    //Start the game loop by adding the `gameLoop` function to
+    //Pixi's `ticker` and providing it with a `delta` argument.
+    app.ticker.add(delta => gameLoop(delta));
+  }
+
+  function gameLoop(delta) {
+    //Move the cat 1 pixel
+    rectangle.x += 5;
+  }
+  setup();
   document.body.appendChild(app.view);
 };
 
