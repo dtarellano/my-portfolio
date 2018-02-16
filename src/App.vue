@@ -2,9 +2,6 @@
 <div id="app">
   <app-navbar></app-navbar>
   <app-profile></app-profile>
-  <div class="square">
-
-  </div>
 </div>
 </template>
 
