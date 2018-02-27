@@ -1,7 +1,7 @@
 <template>
   <div class="profile container">
     <h1>David Arellano</h1>
-    <p>Front End Developer</p>
+    <p>Software Engineer</p>
     <div class="frameworks">
       <p>Frameworks</p>
       <ul>
