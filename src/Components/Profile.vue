@@ -1,5 +1,5 @@
 <template>
-  <div class="profile">
+  <div class="profile container">
     <h1>David Arellano</h1>
     <p>Front End Developer</p>
     <div class="frameworks">
@@ -45,9 +45,11 @@
 
 <style>
   .profile {
-    width: 40%;
+    width: 50%;
+    height: 80%;
     position: absolute;
     color: white;
+     background: rgba(0, 0, 0, 0.5);
   }
 
   ul {
