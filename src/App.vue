@@ -33,6 +33,10 @@ export default {
 body {
   background-color: #343434;
 }
+
+/*canvas {
+  position: absolute;
+}*/
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
