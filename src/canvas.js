@@ -10,22 +10,76 @@ const canvas = () => {
   app.renderer.autoResize = true;
   app.renderer.resize(window.innerWidth, window.innerHeight);
 
+  const leftPixels = () => {
+    setInterval(() => {
+      let rectangle = new PIXI.Graphics();
+      rectangle.beginFill(0x21a85e);
+      rectangle.drawRect(0, 0, 32, 32);
+      rectangle.endFill();
+      rectangle.x = 0;
+      rectangle.y = 0;
+      app.stage.addChild(rectangle);
+      function setup() {
+        app.ticker.add(delta => loop(delta));
+      }
+      function loop(delta) {
+        rectangle.x += 5 + delta;
+      }
+      setup();
+    }, 3000);
+  };
+
   setInterval(() => {
     let rectangle = new PIXI.Graphics();
     rectangle.beginFill(0x21a85e);
-    rectangle.drawRect(0, 0, 64, 64);
+    rectangle.drawRect(0, 0, 32, 32);
     rectangle.endFill();
-    rectangle.x = 170;
+    rectangle.x = 0;
+    rectangle.y = window.innerHeight;
+    app.stage.addChild(rectangle);
+    function setup() {
+      app.ticker.add(delta => loop(delta));
+    }
+    function loop(delta) {
+      rectangle.y -= 5 + delta;
+    }
+    setup();
+  }, 3000);
+
+  setInterval(() => {
+    let rectangle = new PIXI.Graphics();
+    rectangle.beginFill(0x21a85e);
+    rectangle.drawRect(0, 0, 32, 32);
+    rectangle.endFill();
+    rectangle.x = 0;
     rectangle.y = 0;
     app.stage.addChild(rectangle);
     function setup() {
       app.ticker.add(delta => loop(delta));
     }
     function loop(delta) {
-      rectangle.x += 5 + delta;
+      rectangle.y += 5 + delta;
     }
     setup();
-  }, 1000);
+  }, 3000);
+
+  setInterval(() => {
+    let rectangle = new PIXI.Graphics();
+    rectangle.beginFill(0x21a85e);
+    rectangle.drawRect(0, 0, 32, 32);
+    rectangle.endFill();
+    rectangle.x = window.innerWidth;
+    rectangle.y = 0;
+    app.stage.addChild(rectangle);
+    function setup() {
+      app.ticker.add(delta => loop(delta));
+    }
+    function loop(delta) {
+      rectangle.x -= 5 + delta;
+    }
+    setup();
+  }, 3000);
+
   document.body.appendChild(app.view);
 };
 
