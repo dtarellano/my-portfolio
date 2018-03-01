@@ -2,8 +2,8 @@ import * as PIXI from 'pixi.js';
 
 const canvas = () => {
   let app = new PIXI.Application({
-    width: 1280,
-    height: 800,
+    width: window.innerWidth,
+    height: window.innerHeight,
     backgroundColor: 0x343434
   });
   app.renderer.view.style.display = 'block';
