@@ -1,21 +1,20 @@
 <template>
   <div class="profile container">
-    <h1>David Arellano</h1>
-    <p>Software Engineer</p>
-    <div class="list">
-      <ul>
+    <div class="row">
+      <h1>David Arellano</h1>
+    </div>
+    <div class="row text-center">
+      <ul class="col-12">
+        <li class="list-header">Software Engineer</li>
         <li class="list-header">Frameworks</li>
         <li>React</li>
         <li>Vue.JS</li>
         <li>AngularJS</li>
-        <li>Node/Express.JS</li>
+        <li>Node/Express</li>
         <li>Serverless</li>
         <li>Boostrap</li>
-        <li>Backbone.JS</li>
       </ul>
-    </div>
-    <div class="list">
-      <ul>
+      <ul class="col-12">
         <li class="list-header">Dev Tools</li>
         <li>Webpack</li>
         <li>Git</li>
@@ -23,21 +22,22 @@
         <li>Docker</li>
         <li>AWS Lambda</li>
       </ul>
-    </div>
-    <div class="list">
-      <ul>
+      <ul class="col-12">
         <li class="list-header">Databases</li>
         <li>MongoDB</li>
-        <li>Apache Cassandra</li>
+        <li>Cassandra</li>
         <li>MySQL</li>
         <li>Postgres</li>
       </ul>
+      <div class="link-container">
+        <a href="https://www.linkedin.com/in/davidtarellano/">Linkedin</a>
+        <a href="https://www.github.com/dtarellano">Github</a>
+        <h3>contact@dtarellano.com</h3>
+      </div>
     </div>
-    <div class="link-container">
-      <a href="https://www.linkedin.com/in/davidtarellano/">Linkedin</a>
-      <a href="https://www.github.com/dtarellano">Github</a>
-      <h3>contact@dtarellano.com</h3>
+
     </div>
+
   </div>
 </template>
 
@@ -48,10 +48,10 @@
 <style>
   .profile {
     width: 50%;
-    height: 80%;
+    height: 90%;
     position: absolute;
     color: white;
-     background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
   }
   .list-header {
     font-size: 1.2em;
@@ -65,6 +65,10 @@
   }
   .link-container {
     position: relative;
+    float: right;
+    left: 20%;
   }
-
+  h1 {
+    font-size: 4em;
+  }
 </style>
