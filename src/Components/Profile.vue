@@ -30,19 +30,20 @@
         <li>Postgres</li>
       </ul>
       <div class="link-container">
-        <a href="https://www.linkedin.com/in/davidtarellano/">Linkedin</a>
-        <a href="https://www.github.com/dtarellano">Github</a>
+        <i class="fab fa-linkedin">
+          <a href="https://www.linkedin.com/in/davidtarellano/"></a></i>
+        <i class="fab fa-github-square">
+          <a href="https://www.github.com/dtarellano"></a>
+        </i>
         <h3>contact@dtarellano.com</h3>
       </div>
     </div>
-
     </div>
 
   </div>
 </template>
 
 <script>
-
 </script>
 
 <style>
@@ -70,5 +71,13 @@
   }
   h1 {
     font-size: 4em;
+  }
+
+  .fa-linkedin {
+    font-size: 50px;
+  }
+
+  .fa-github-square {
+    font-size: 50px;
   }
 </style>
