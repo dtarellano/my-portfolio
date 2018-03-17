@@ -25,23 +25,19 @@
         <li>Docker</li>
         <li>AWS Lambda</li>
       </ul>
-      <ul class="col-12">
+      <ul class="col-6">
         <li class="list-header">Databases</li>
         <li>MongoDB</li>
         <li>Cassandra</li>
         <li>MySQL</li>
         <li>Postgres</li>
       </ul>
-      <div class="col-12">
-        <div class="container">
-          <i class="fab fa-linkedin col-3">
-            <a href="https://www.linkedin.com/in/davidtarellano/"></a></i>
-          <i class="fab fa-github-square col-3">
-            <a href="https://www.github.com/dtarellano"></a>
-          </i>
-          <p class="col-6">contact@dtarellano.com</p>
-        </div>
-      </div>
+        <i class="fab fa-linkedin col-1">
+          <a href="https://www.linkedin.com/in/davidtarellano/"></a></i>
+        <i class="fab fa-github-square col-1">
+          <a href="https://www.github.com/dtarellano"></a>
+        </i>
+        <a class="col-3 contact" href="mailto:contact@dtarellano.com">contact@dtarellano.com</a>
     </div>
     </div>
 
@@ -54,7 +50,7 @@
 <style>
 .profile {
   width: 50%;
-  height: 90%;
+  height: auto;
   position: absolute;
   color: white;
   background: rgba(0, 0, 0, 0.6);
@@ -85,7 +81,7 @@ h1 {
 .fa-github-square {
   font-size: 50px;
 }
-
-p {
+.contact {
+  text-decoration-style: none;
 }
 </style>
