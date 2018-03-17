@@ -15,7 +15,7 @@ const canvas = () => {
       let entry = Math.random() * (window.innerWidth - 1) + 1;
       let rectangle = new PIXI.Graphics();
       rectangle.beginFill(0x21a85e);
-      rectangle.drawRect(0, 0, 32, 32);
+      rectangle.drawRect(0, 0, 24, 24);
       rectangle.endFill();
       rectangle.x = 0;
       rectangle.y = entry;
@@ -24,7 +24,7 @@ const canvas = () => {
         app.ticker.add(delta => loop(delta));
       }
       function loop(delta) {
-        rectangle.x += 5 + delta;
+        rectangle.x += 3 + delta;
       }
       setup();
     }, 1000);
@@ -36,7 +36,7 @@ const canvas = () => {
       let entry = Math.random() * (window.innerHeight - 1) + 1;
       let rectangle = new PIXI.Graphics();
       rectangle.beginFill(0x21a85e);
-      rectangle.drawRect(0, 0, 32, 32);
+      rectangle.drawRect(0, 0, 24, 24);
       rectangle.endFill();
       rectangle.x = window.innerWidth;
       rectangle.y = entry;
@@ -45,7 +45,7 @@ const canvas = () => {
         app.ticker.add(delta => loop(delta));
       }
       function loop(delta) {
-        rectangle.x -= 5 + delta;
+        rectangle.x -= 3 + delta;
       }
       setup();
     }, 3000);
@@ -57,7 +57,7 @@ const canvas = () => {
       let entry = Math.random() * (window.innerWidth - 1) + 1;
       let rectangle = new PIXI.Graphics();
       rectangle.beginFill(0x21a85e);
-      rectangle.drawRect(0, 0, 32, 32);
+      rectangle.drawRect(0, 0, 24, 24);
       rectangle.endFill();
       rectangle.x = entry;
       rectangle.y = 0;
@@ -66,7 +66,7 @@ const canvas = () => {
         app.ticker.add(delta => loop(delta));
       }
       function loop(delta) {
-        rectangle.y += 5 + delta;
+        rectangle.y += 3 + delta;
       }
       setup();
     }, 3000);
@@ -77,7 +77,7 @@ const canvas = () => {
       let entry = Math.random() * (window.innerHeight - 1) + 1;
       let rectangle = new PIXI.Graphics();
       rectangle.beginFill(0x21a85e);
-      rectangle.drawRect(0, 0, 32, 32);
+      rectangle.drawRect(0, 0, 24, 24);
       rectangle.endFill();
       rectangle.x = entry;
       rectangle.y = window.innerWidth;
@@ -86,7 +86,7 @@ const canvas = () => {
         app.ticker.add(delta => loop(delta));
       }
       function loop(delta) {
-        rectangle.y -= 5 + delta;
+        rectangle.y -= 3 + delta;
       }
       setup();
     }, 3000);
