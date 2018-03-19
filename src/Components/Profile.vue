@@ -32,12 +32,15 @@
         <li>MySQL</li>
         <li>Postgres</li>
       </ul>
-        <i class="fab fa-linkedin col-1">
-          <a href="https://www.linkedin.com/in/davidtarellano/"></a></i>
-        <i class="fab fa-github-square col-1">
-          <a href="https://www.github.com/dtarellano"></a>
-        </i>
-        <a class="col-3 contact" href="mailto:contact@dtarellano.com">contact@dtarellano.com</a>
+      <div class="col-6 links">
+        <a href="https://www.linkedin.com/in/davidtarellano/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.github.com/dtarellano" target="_blank">
+          <i class="fab fa-github-square"></i>
+        </a>
+        <a class="contact" href="mailto:contact@dtarellano.com">contact@dtarellano.com</a>
+      </div>
     </div>
     </div>
 
@@ -83,5 +86,9 @@ h1 {
 }
 .contact {
   text-decoration-style: none;
+}
+
+.links {
+  top: 75px;
 }
 </style>
