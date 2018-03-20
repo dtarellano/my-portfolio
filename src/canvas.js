@@ -12,7 +12,7 @@ const canvas = () => {
 
   const leftPixels = () => {
     setInterval(() => {
-      let entry = Math.random() * (window.innerWidth - 1) + 1;
+      let entry = Math.random() * (window.innerWidth - 50) + 1;
       let rectangle = new PIXI.Graphics();
       rectangle.beginFill(0x21a85e);
       rectangle.drawRect(0, 0, 24, 24);
@@ -21,7 +21,14 @@ const canvas = () => {
       rectangle.y = entry;
       app.stage.addChild(rectangle);
       function setup() {
-        app.ticker.add(delta => loop(delta));
+        app.ticker.add(delta => {
+          if (rectangle.x >= 1400) {
+            rectangle.clear();
+            return;
+          }
+
+          loop(delta);
+        });
       }
       function loop(delta) {
         rectangle.x += 3 + delta;
@@ -42,7 +49,13 @@ const canvas = () => {
       rectangle.y = entry;
       app.stage.addChild(rectangle);
       function setup() {
-        app.ticker.add(delta => loop(delta));
+        app.ticker.add(delta => {
+          if (rectangle.x < -10) {
+            rectangle.clear();
+            return;
+          }
+          loop(delta);
+        });
       }
       function loop(delta) {
         rectangle.x -= 3 + delta;
@@ -63,7 +76,13 @@ const canvas = () => {
       rectangle.y = 0;
       app.stage.addChild(rectangle);
       function setup() {
-        app.ticker.add(delta => loop(delta));
+        app.ticker.add(delta => {
+          if (rectangle.y > 900) {
+            rectangle.clear();
+            return;
+          }
+          loop(delta);
+        });
       }
       function loop(delta) {
         rectangle.y += 3 + delta;
@@ -72,10 +91,12 @@ const canvas = () => {
     }, 3000);
   };
   topPixels();
+
   const bottomPixels = () => {
     setInterval(() => {
       let entry = Math.random() * (window.innerHeight - 1) + 1;
       let rectangle = new PIXI.Graphics();
+      console.log(rectangle);
       rectangle.beginFill(0x21a85e);
       rectangle.drawRect(0, 0, 24, 24);
       rectangle.endFill();
@@ -83,7 +104,13 @@ const canvas = () => {
       rectangle.y = window.innerWidth;
       app.stage.addChild(rectangle);
       function setup() {
-        app.ticker.add(delta => loop(delta));
+        app.ticker.add(delta => {
+          if (rectangle.y <= -100) {
+            rectangle.clear();
+            return;
+          }
+          loop(delta);
+        });
       }
       function loop(delta) {
         rectangle.y -= 3 + delta;
