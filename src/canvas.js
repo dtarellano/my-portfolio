@@ -2,11 +2,14 @@ import * as PIXI from 'pixi.js';
 import * as FILTERS from 'pixi-filters';
 
 const canvas = () => {
+  const colors = [0x21a85e, 0x5e21a8, 0xccff33, 0xa82128];
+
   let app = new PIXI.Application({
     width: window.innerWidth,
     height: window.innerHeight,
     backgroundColor: 0x343434
   });
+
   app.renderer.view.style.display = 'block';
   app.renderer.autoResize = true;
   app.renderer.resize(window.innerWidth, window.innerHeight);
@@ -17,17 +20,18 @@ const canvas = () => {
 
   const leftPixels = () => {
     setInterval(() => {
+      const randomColor = colors[Math.floor(Math.random() * 4)];
       let entry = Math.random() * (window.innerWidth - 50) + 1;
       let container = new PIXI.Container();
       let rectangle = new PIXI.Graphics();
       const size = 200;
       // rectangle.blendMode = PIXI.BLEND_MODES.MULTIPLY;
-      rectangle.beginFill(0x21a85e, 0.2);
+      rectangle.beginFill(randomColor, 0.2);
       rectangle.drawCircle(0, 0, 10);
       rectangle.endFill();
       rectangle.x = 0;
       rectangle.y = entry;
-      rectangle.filters = [new FILTERS.GlowFilter(10, 10, 2, 0x21a85e, 0.5)];
+      rectangle.filters = [new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)];
 
       function setup() {
         app.ticker.add(delta => {
@@ -43,7 +47,7 @@ const canvas = () => {
       function loop(delta) {
         rectangle.x += 3 + delta;
         let newRectangle = new PIXI.Graphics();
-        newRectangle.beginFill(0x21a85e);
+        newRectangle.beginFill(randomColor);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
         newRectangle.x = rectangle.x - 9;
@@ -60,7 +64,7 @@ const canvas = () => {
       setup();
       app.stage.addChild(container);
       app.stage.addChild(rectangle);
-    }, 1000);
+    }, 3000);
   };
   leftPixels();
   //
