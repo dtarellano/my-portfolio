@@ -27,7 +27,7 @@ const canvas = () => {
       const size = 200;
       // rectangle.blendMode = PIXI.BLEND_MODES.MULTIPLY;
       rectangle.beginFill(randomColor, 0.2);
-      rectangle.drawCircle(0, 0, 10);
+      rectangle.drawRect(0, 0, 12, 12);
       rectangle.endFill();
       rectangle.x = 0;
       rectangle.y = entry;
@@ -36,6 +36,7 @@ const canvas = () => {
       function setup() {
         app.ticker.add(delta => {
           if (rectangle.x >= 2000) {
+            rectangle.clear();
             container.removeChildren();
             return;
           }
@@ -50,8 +51,9 @@ const canvas = () => {
         newRectangle.beginFill(randomColor);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
-        newRectangle.x = rectangle.x - 9;
-        newRectangle.y = rectangle.y - 6;
+        newRectangle.x = rectangle.x;
+        newRectangle.y = rectangle.y;
+        newRectangle.alpha = 0.8;
         container.addChild(newRectangle);
         if (container.children.length > size) {
           container.removeChildAt(0);
@@ -67,34 +69,56 @@ const canvas = () => {
     }, 3000);
   };
   leftPixels();
-  //
-  // const rightPixels = () => {
-  //   setInterval(() => {
-  //     let entry = Math.random() * (window.innerHeight - 1) + 1;
-  //     let rectangle = new PIXI.Graphics();
-  //     rectangle.beginFill(0x21a85e);
-  //     rectangle.drawRect(0, 0, 24, 24);
-  //     rectangle.endFill();
-  //     rectangle.x = window.innerWidth;
-  //     rectangle.y = entry;
-  //     app.stage.addChild(rectangle);
-  //     function setup() {
-  //       app.ticker.add(delta => {
-  //         if (rectangle.x < -10) {
-  //           rectangle.clear();
-  //           return;
-  //         }
-  //         loop(delta);
-  //       });
-  //     }
-  //     function loop(delta) {
-  //       rectangle.x -= 3 + delta;
-  //     }
-  //     setup();
-  //   }, 3000);
-  // };
-  // rightPixels();
-  //
+
+  const rightPixels = () => {
+    setInterval(() => {
+      const randomColor = colors[Math.floor(Math.random() * 4)];
+      let entry = Math.random() * (window.innerHeight - 1) + 1;
+      let rectangle = new PIXI.Graphics();
+      let container = new PIXI.Container();
+      const size = 200;
+
+      rectangle.beginFill(randomColor, 0.2);
+      rectangle.drawRect(0, 0, 12, 12);
+      rectangle.endFill();
+      rectangle.x = window.innerWidth;
+      rectangle.y = entry;
+      rectangle.filters = [new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)];
+
+      function setup() {
+        app.ticker.add(delta => {
+          if (rectangle.x < -2000) {
+            rectangle.clear();
+            container.removeChildren();
+            return;
+          }
+          loop(delta);
+        });
+      }
+      function loop(delta) {
+        rectangle.x -= 3 + delta;
+        let newRectangle = new PIXI.Graphics();
+        newRectangle.beginFill(randomColor);
+        newRectangle.drawRect(0, 0, 12, 12);
+        newRectangle.endFill();
+        newRectangle.x = rectangle.x;
+        newRectangle.y = rectangle.y;
+        container.addChild(newRectangle);
+        if (container.children.length > size) {
+          container.removeChildAt(0);
+        }
+        let len = container.children.length;
+        while (len--) {
+          container.children[len].alpha -= 0.01;
+        }
+      }
+      setup();
+      app.stage.addChild(container);
+      app.stage.addChild(rectangle);
+    }, 3000);
+  };
+  rightPixels();
+
   // const topPixels = () => {
   //   setInterval(() => {
   //     let entry = Math.random() * (window.innerWidth - 1) + 1;
