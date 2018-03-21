@@ -13,10 +13,6 @@ const canvas = () => {
   app.renderer.view.style.display = 'block';
   app.renderer.autoResize = true;
   app.renderer.resize(window.innerWidth, window.innerHeight);
-  // app.renderer.preserveDrawingBuffer = true;
-  // app.renderer.clearBeforeRender = false;
-  // app.renderer.transparent = true;
-  // console.log(app);
 
   const leftPixels = () => {
     setInterval(() => {
@@ -25,7 +21,7 @@ const canvas = () => {
       let container = new PIXI.Container();
       let rectangle = new PIXI.Graphics();
       const size = 200;
-      // rectangle.blendMode = PIXI.BLEND_MODES.MULTIPLY;
+
       rectangle.beginFill(randomColor, 0.2);
       rectangle.drawRect(0, 0, 12, 12);
       rectangle.endFill();
@@ -47,7 +43,9 @@ const canvas = () => {
 
       function loop(delta) {
         rectangle.x += 3 + delta;
+
         let newRectangle = new PIXI.Graphics();
+
         newRectangle.beginFill(randomColor);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
@@ -55,10 +53,13 @@ const canvas = () => {
         newRectangle.y = rectangle.y;
         newRectangle.alpha = 0.8;
         container.addChild(newRectangle);
+
         if (container.children.length > size) {
           container.removeChildAt(0);
         }
+
         let len = container.children.length;
+
         while (len--) {
           container.children[len].alpha -= 0.01;
         }
@@ -97,17 +98,22 @@ const canvas = () => {
       }
       function loop(delta) {
         rectangle.x -= 3 + delta;
+
         let newRectangle = new PIXI.Graphics();
+
         newRectangle.beginFill(randomColor);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
         newRectangle.x = rectangle.x;
         newRectangle.y = rectangle.y;
         container.addChild(newRectangle);
+
         if (container.children.length > size) {
           container.removeChildAt(0);
         }
+
         let len = container.children.length;
+
         while (len--) {
           container.children[len].alpha -= 0.01;
         }
@@ -146,17 +152,22 @@ const canvas = () => {
       }
       function loop(delta) {
         rectangle.y += 3 + delta;
+
         let newRectangle = new PIXI.Graphics();
+
         newRectangle.beginFill(randomColor);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
         newRectangle.x = rectangle.x;
         newRectangle.y = rectangle.y;
         container.addChild(newRectangle);
+
         if (container.children.length > size) {
           container.removeChildAt(0);
         }
+
         let len = container.children.length;
+
         while (len--) {
           container.children[len].alpha -= 0.01;
         }
@@ -196,16 +207,20 @@ const canvas = () => {
       function loop(delta) {
         rectangle.y -= 3 + delta;
         let newRectangle = new PIXI.Graphics();
+
         newRectangle.beginFill(randomColor);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
         newRectangle.x = rectangle.x;
         newRectangle.y = rectangle.y;
         container.addChild(newRectangle);
+
         if (container.children.length > size) {
           container.removeChildAt(0);
         }
+
         let len = container.children.length;
+
         while (len--) {
           container.children[len].alpha -= 0.01;
         }
