@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import * as FILTERS from 'pixi-filters';
 
 const canvas = () => {
   let app = new PIXI.Application({
@@ -21,15 +22,16 @@ const canvas = () => {
       let rectangle = new PIXI.Graphics();
       const size = 200;
       // rectangle.blendMode = PIXI.BLEND_MODES.MULTIPLY;
-      rectangle.beginFill(0x37fc90, 0.4);
+      rectangle.beginFill(0x21a85e, 0.2);
       rectangle.drawCircle(0, 0, 10);
       rectangle.endFill();
       rectangle.x = 0;
       rectangle.y = entry;
+      rectangle.filters = [new FILTERS.GlowFilter(10, 10, 2, 0x21a85e, 0.5)];
       app.stage.addChild(rectangle);
       function setup() {
         app.ticker.add(delta => {
-          if (rectangle.x >= 1400) {
+          if (rectangle.x >= 2000) {
             container.removeChildren();
             return;
           }
@@ -43,8 +45,8 @@ const canvas = () => {
         newRectangle.beginFill(0x21a85e);
         newRectangle.drawRect(0, 0, 12, 12);
         newRectangle.endFill();
-        newRectangle.x = rectangle.x;
-        newRectangle.y = rectangle.y;
+        newRectangle.x = rectangle.x - 9;
+        newRectangle.y = rectangle.y - 6;
         container.addChild(newRectangle);
         if (container.children.length > size) {
           container.removeChildAt(0);
@@ -56,6 +58,7 @@ const canvas = () => {
       }
       setup();
       app.stage.addChild(container);
+      console.log(app.stage);
     }, 1000);
   };
   leftPixels();
