@@ -119,32 +119,54 @@ const canvas = () => {
   };
   rightPixels();
 
-  // const topPixels = () => {
-  //   setInterval(() => {
-  //     let entry = Math.random() * (window.innerWidth - 1) + 1;
-  //     let rectangle = new PIXI.Graphics();
-  //     rectangle.beginFill(0x21a85e);
-  //     rectangle.drawRect(0, 0, 24, 24);
-  //     rectangle.endFill();
-  //     rectangle.x = entry;
-  //     rectangle.y = 0;
-  //     app.stage.addChild(rectangle);
-  //     function setup() {
-  //       app.ticker.add(delta => {
-  //         if (rectangle.y > 900) {
-  //           rectangle.clear();
-  //           return;
-  //         }
-  //         loop(delta);
-  //       });
-  //     }
-  //     function loop(delta) {
-  //       rectangle.y += 3 + delta;
-  //     }
-  //     setup();
-  //   }, 3000);
-  // };
-  // topPixels();
+  const topPixels = () => {
+    setInterval(() => {
+      const randomColor = colors[Math.floor(Math.random() * 4)];
+      let entry = Math.random() * (window.innerWidth - 1) + 1;
+      let rectangle = new PIXI.Graphics();
+      let container = new PIXI.Container();
+      const size = 200;
+
+      rectangle.beginFill(randomColor, 0.2);
+      rectangle.drawRect(0, 0, 12, 12);
+      rectangle.endFill();
+      rectangle.x = entry;
+      rectangle.y = 0;
+      rectangle.filters = [new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)];
+
+      function setup() {
+        app.ticker.add(delta => {
+          if (rectangle.y > 2000) {
+            rectangle.clear();
+            container.removeChildren();
+            return;
+          }
+          loop(delta);
+        });
+      }
+      function loop(delta) {
+        rectangle.y += 3 + delta;
+        let newRectangle = new PIXI.Graphics();
+        newRectangle.beginFill(randomColor);
+        newRectangle.drawRect(0, 0, 12, 12);
+        newRectangle.endFill();
+        newRectangle.x = rectangle.x;
+        newRectangle.y = rectangle.y;
+        container.addChild(newRectangle);
+        if (container.children.length > size) {
+          container.removeChildAt(0);
+        }
+        let len = container.children.length;
+        while (len--) {
+          container.children[len].alpha -= 0.01;
+        }
+      }
+      setup();
+      app.stage.addChild(container);
+      app.stage.addChild(rectangle);
+    }, 3000);
+  };
+  topPixels();
   //
   // const bottomPixels = () => {
   //   setInterval(() => {
