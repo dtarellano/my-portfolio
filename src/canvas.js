@@ -28,7 +28,7 @@ const canvas = () => {
       rectangle.x = 0;
       rectangle.y = entry;
       rectangle.filters = [new FILTERS.GlowFilter(10, 10, 2, 0x21a85e, 0.5)];
-      app.stage.addChild(rectangle);
+
       function setup() {
         app.ticker.add(delta => {
           if (rectangle.x >= 2000) {
@@ -39,6 +39,7 @@ const canvas = () => {
           loop(delta);
         });
       }
+
       function loop(delta) {
         rectangle.x += 3 + delta;
         let newRectangle = new PIXI.Graphics();
@@ -58,7 +59,7 @@ const canvas = () => {
       }
       setup();
       app.stage.addChild(container);
-      console.log(app.stage);
+      app.stage.addChild(rectangle);
     }, 1000);
   };
   leftPixels();
