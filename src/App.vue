@@ -15,10 +15,10 @@ import canvas from './canvas';
 
 export default {
   name: 'app',
-  data () {
+  data() {
     return {
       hello: 'Hello World'
-    }
+    };
   },
   created() {
     canvas();
@@ -27,7 +27,8 @@ export default {
     'app-navbar': Nav,
     'app-profile': Profile
   }
-}</script>
+};
+</script>
 
 <style>
 body {
@@ -52,8 +53,7 @@ h2 {
   font-weight: normal;
 }
 
-
 a {
-  color: #42b983;
+  color: white;
 }
 </style>
