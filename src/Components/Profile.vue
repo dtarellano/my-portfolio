@@ -7,7 +7,7 @@
       <div class="list-header">Software Engineer</div>
     </div>
     <div class="row text-center">
-      <ul class="col-6">
+      <ul class="col-12 col-md-6">
         <li class="list-header">Frameworks</li>
         <li>React</li>
         <li>Vue.JS</li>
@@ -16,7 +16,7 @@
         <li>Serverless</li>
         <li>Boostrap</li>
       </ul>
-      <ul class="col-6">
+      <ul class="col-12 col-md-6">
         <li class="list-header">Dev Tools</li>
         <li>Webpack</li>
         <li>Git</li>
@@ -25,14 +25,14 @@
         <li>Docker</li>
         <li>AWS Lambda</li>
       </ul>
-      <ul class="col-6">
+      <ul class="col-12 col-md-6">
         <li class="list-header">Databases</li>
         <li>MongoDB</li>
         <li>Cassandra</li>
         <li>MySQL</li>
         <li>Postgres</li>
       </ul>
-      <div class="col-6 links">
+      <div class="col-12 links col-md-6">
         <a href="https://www.linkedin.com/in/davidtarellano/" target="_blank">
           <i class="fab fa-linkedin"></i>
         </a>
@@ -51,7 +51,14 @@
 </script>
 
 <style>
+@media (max-width: 768px) {
+  .profile {
+    top: 11% !important;
+    width: 100% !important;
+  }
+}
 .profile {
+  top: 25%;
   width: 50%;
   height: auto;
   position: absolute;
@@ -87,7 +94,11 @@ h1 {
 .contact {
   text-decoration-style: none;
 }
-
+@media (max-width: 768px) {
+  .links {
+    top: 10% !important;
+  }
+}
 .links {
   top: 75px;
 }
