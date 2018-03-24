@@ -58,12 +58,13 @@
   }
 }
 .profile {
-  top: 25%;
+  top: 13%;
   width: 50%;
+  left: 6%;
   height: auto;
   position: absolute;
   color: white;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 .list-header {
   font-size: 1.2em;
