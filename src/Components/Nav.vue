@@ -46,4 +46,12 @@
 .bg-info {
   background-color: #232323 !important;
 }
+
+.navbar-nav .dropdown-menu {
+  background-color: #232323 !important;
+}
+
+.dropdown-item {
+  color: white;
+}
 </style>
