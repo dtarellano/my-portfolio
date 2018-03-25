@@ -8,11 +8,31 @@
           <template slot="button-content">
             <em>Projects</em>
           </template>
-          <b-dropdown-item href="#">Ride Share</b-dropdown-item>
-          <b-dropdown-item href="#">Siren</b-dropdown-item>
-          <b-dropdown-item href="#">News Stand</b-dropdown-item>
+          <b-dropdown-item
+            href="https://github.com/dtarellano/serverless-dispatch-service"
+            target="_blank"
+          >
+            Ride Share
+          </b-dropdown-item>
+          <b-dropdown-item
+            href="https://github.com/gitPullRebase/Siren"
+            target="_blank"
+            >
+            Siren
+          </b-dropdown-item>
+          <b-dropdown-item
+            href="https://github.com/gitPullRebase/news_stand"
+            target="_blank"
+          >
+            News Stand
+          </b-dropdown-item>
           <b-dropdown-item href="#">Image Finder</b-dropdown-item>
-          <b-dropdown-item href="#">Math Quiz</b-dropdown-item>
+          <b-dropdown-item
+            href="https://github.com/dtarellano/VueJS-MathQuiz"
+            target="_blank"
+          >
+          Math Quiz
+          </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
