@@ -55,6 +55,8 @@
   .profile {
     top: 11% !important;
     width: 100% !important;
+    left: 0% !important;
+    border-radius: 5px !important;
   }
 }
 .profile {
@@ -65,6 +67,8 @@
   position: absolute;
   color: white;
   background: rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 7px 15px -2px black;
+  border-radius: 12px;
 }
 .list-header {
   font-size: 1.2em;
