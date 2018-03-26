@@ -59,6 +59,7 @@
     border-radius: 5px !important;
   }
 }
+
 .profile {
   top: 13%;
   width: 50%;
@@ -70,21 +71,26 @@
   box-shadow: 5px 7px 15px -2px black;
   border-radius: 12px;
 }
+
 .list-header {
   font-size: 1.2em;
   font-weight: bold;
 }
+
 ul {
   list-style-type: none;
 }
+
 .list {
   float: left;
 }
+
 .link-container {
   position: relative;
   float: right;
   left: 20%;
 }
+
 h1 {
   font-size: 4em;
 }
@@ -96,14 +102,17 @@ h1 {
 .fa-github-square {
   font-size: 50px;
 }
+
 .contact {
   text-decoration-style: none;
 }
+
 @media (max-width: 768px) {
   .links {
     top: 10% !important;
   }
 }
+
 .links {
   top: 75px;
 }
