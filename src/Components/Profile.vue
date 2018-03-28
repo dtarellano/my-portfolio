@@ -56,7 +56,8 @@
     top: 11% !important;
     width: 100% !important;
     left: 0% !important;
-    border-radius: 5px !important;
+    border-radius: 0px !important;
+    box-shadow: none;
   }
 }
 
