@@ -28,7 +28,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = 0;
         rectangle.y = entry;
-        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
+        rectangle.filters = [new GlowFilter(12, 12, 2, randomColor, 1)];
 
         function setup() {
           app.ticker.add(delta => {
@@ -87,7 +87,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = window.innerWidth;
         rectangle.y = entry;
-        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
+        rectangle.filters = [new GlowFilter(12, 12, 2, randomColor, 1)];
 
         function setup() {
           app.ticker.add(delta => {
@@ -143,7 +143,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = entry;
         rectangle.y = 0;
-        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
+        rectangle.filters = [new GlowFilter(12, 12, 2, randomColor, 1)];
 
         function setup() {
           app.ticker.add(delta => {
@@ -199,7 +199,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = entry;
         rectangle.y = window.innerWidth;
-        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
+        rectangle.filters = [new GlowFilter(12, 12, 2, randomColor, 1)];
 
         function setup() {
           app.ticker.add(delta => {
