@@ -58,6 +58,7 @@
     left: 0% !important;
     border-radius: 0px !important;
     box-shadow: none;
+    position: static !important;
   }
 }
 
