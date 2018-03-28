@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import * as FILTERS from 'pixi-filters';
+import { GlowFilter } from '@pixi/filter-glow';
 
 const canvas = () => {
   const colors = [0x21a85e, 0x5e21a8, 0xccff33, 0xa82128];
@@ -28,9 +28,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = 0;
         rectangle.y = entry;
-        rectangle.filters = [
-          new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)
-        ];
+        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
 
         function setup() {
           app.ticker.add(delta => {
@@ -89,9 +87,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = window.innerWidth;
         rectangle.y = entry;
-        rectangle.filters = [
-          new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)
-        ];
+        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
 
         function setup() {
           app.ticker.add(delta => {
@@ -147,9 +143,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = entry;
         rectangle.y = 0;
-        rectangle.filters = [
-          new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)
-        ];
+        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
 
         function setup() {
           app.ticker.add(delta => {
@@ -205,9 +199,7 @@ const canvas = () => {
         rectangle.endFill();
         rectangle.x = entry;
         rectangle.y = window.innerWidth;
-        rectangle.filters = [
-          new FILTERS.GlowFilter(10, 10, 2, randomColor, 0.5)
-        ];
+        rectangle.filters = [new GlowFilter(10, 10, 2, randomColor, 0.5)];
 
         function setup() {
           app.ticker.add(delta => {
