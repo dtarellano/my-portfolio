@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js';
+import { Container, Graphics } from 'pixi.js';
 import { GlowFilter } from '@pixi/filter-glow';
 
 const canvas = () => {
