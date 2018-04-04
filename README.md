@@ -5,6 +5,12 @@
 ## Build Setup
 
 ```bash
+# Technologies Used:
+- Vue.JS
+- PIXI.JS
+```
+
+```bash
 # install dependencies
 npm install
 
