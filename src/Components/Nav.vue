@@ -60,4 +60,10 @@
   text-decoration: none;
   background-color: #16181b;
 }
+
+.dropdown-item:focus {
+  color: #f8f9fa;
+  text-decoration: none;
+  background-color: #16181b;
+}
 </style>
