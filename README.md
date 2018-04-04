@@ -6,8 +6,8 @@
 
 ```bash
 # Technologies Used:
-- Vue.JS
-- PIXI.JS
+- Vue.JS  (Progressive JavaScript Framework)
+- PIXI.JS (HTML5 Creation Engine)
 ```
 
 ```bash
