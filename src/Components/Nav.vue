@@ -54,4 +54,10 @@
 .dropdown-item {
   color: white;
 }
+
+.dropdown-item:hover {
+  color: #f8f9fa;
+  text-decoration: none;
+  background-color: #16181b;
+}
 </style>
