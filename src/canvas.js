@@ -19,8 +19,8 @@ const canvas = () => {
       if (document.hasFocus()) {
         const randomColor = colors[Math.floor(Math.random() * 4)];
         let entry = Math.random() * (window.innerWidth - 50) + 1;
-        let container = new PIXI.Container();
-        let rectangle = new PIXI.Graphics();
+        let container = new Container();
+        let rectangle = new Graphics();
         const size = 200;
 
         rectangle.beginFill(randomColor, 0.2);
@@ -45,7 +45,7 @@ const canvas = () => {
         function loop(delta) {
           rectangle.x += 3 + delta;
 
-          let newRectangle = new PIXI.Graphics();
+          let newRectangle = new Graphics();
 
           newRectangle.beginFill(randomColor);
           newRectangle.drawRect(0, 0, 12, 12);
@@ -78,8 +78,8 @@ const canvas = () => {
       if (document.hasFocus()) {
         const randomColor = colors[Math.floor(Math.random() * 4)];
         let entry = Math.random() * (window.innerHeight - 1) + 1;
-        let rectangle = new PIXI.Graphics();
-        let container = new PIXI.Container();
+        let rectangle = new Graphics();
+        let container = new Container();
         const size = 200;
 
         rectangle.beginFill(randomColor, 0.2);
@@ -102,7 +102,7 @@ const canvas = () => {
         function loop(delta) {
           rectangle.x -= 3 + delta;
 
-          let newRectangle = new PIXI.Graphics();
+          let newRectangle = new Graphics();
 
           newRectangle.beginFill(randomColor);
           newRectangle.drawRect(0, 0, 12, 12);
@@ -134,8 +134,8 @@ const canvas = () => {
       if (document.hasFocus()) {
         const randomColor = colors[Math.floor(Math.random() * 4)];
         let entry = Math.random() * (window.innerWidth - 1) + 1;
-        let rectangle = new PIXI.Graphics();
-        let container = new PIXI.Container();
+        let rectangle = new Graphics();
+        let container = new Container();
         const size = 200;
 
         rectangle.beginFill(randomColor, 0.2);
@@ -158,7 +158,7 @@ const canvas = () => {
         function loop(delta) {
           rectangle.y += 3 + delta;
 
-          let newRectangle = new PIXI.Graphics();
+          let newRectangle = new Graphics();
 
           newRectangle.beginFill(randomColor);
           newRectangle.drawRect(0, 0, 12, 12);
@@ -190,8 +190,8 @@ const canvas = () => {
       if (document.hasFocus()) {
         const randomColor = colors[Math.floor(Math.random() * 4)];
         let entry = Math.random() * (window.innerHeight - 1) + 1;
-        let rectangle = new PIXI.Graphics();
-        let container = new PIXI.Container();
+        let rectangle = new Graphics();
+        let container = new Container();
         const size = 200;
 
         rectangle.beginFill(randomColor, 0.2);
@@ -213,7 +213,7 @@ const canvas = () => {
         }
         function loop(delta) {
           rectangle.y -= 3 + delta;
-          let newRectangle = new PIXI.Graphics();
+          let newRectangle = new Graphics();
 
           newRectangle.beginFill(randomColor);
           newRectangle.drawRect(0, 0, 12, 12);
