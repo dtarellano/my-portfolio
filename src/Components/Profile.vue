@@ -14,7 +14,8 @@
         <li>AngularJS</li>
         <li>Node/Express</li>
         <li>Serverless</li>
-        <li>Boostrap</li>
+        <li>Bootstrap</li>
+        <li>Bulma</li>
       </ul>
       <ul class="col-12 col-md-6">
         <li class="list-header">Dev Tools</li>
